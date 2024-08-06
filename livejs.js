@@ -1,24 +1,16 @@
 /*
   Live.js - One script closer to Designing in the Browser
-  Written for Handcraft.com by Martin Kool (@mrtnkl).
+  Originally written for Handcraft.com by Martin Kool (@mrtnkl),
+  Updated by Pablo Bollansée.
 
-  Version 4.
-  Recent change: Made stylesheet and mimetype checks case insensitive.
+  pabloproductions.be/LiveJS/livejs.js
 
-  http://livejs.com
-  http://livejs.com/license (MIT)  
-  @livejs
+  Include livejs.js#css to monitor css changes only.
+  Include livejs.js#js to monitor js changes only.
+  Include livejs.js#html to monitor html changes only.
+  Mix and match to monitor a preferred combination such as livejs.js#html,css  
 
-  Include live.js#css to monitor css changes only.
-  Include live.js#js to monitor js changes only.
-  Include live.js#html to monitor html changes only.
-  Mix and match to monitor a preferred combination such as live.js#html,css  
-
-  By default, just include live.js to monitor all css, js and html changes.
-  
-  Live.js can also be loaded as a bookmarklet. It is best to only use it for CSS then,
-  as a page reload due to a change in html or css would not re-include the bookmarklet.
-  To monitor CSS and be notified that it has loaded, include it as: live.js#css,notify
+  By default, just include livejs.js to monitor all css, js and html changes.
 */
 (function () {
 
@@ -63,7 +55,7 @@
         var script = scripts[i], src = script.getAttribute("src");
         if (src && isLocal(src))
           uris.push(src);
-        if (src && src.match(/\blive.js#/)) {
+        if (src && src.match(/\blivejs.js#/)) {
           for (var type in active)
             active[type] = src.match("[#,|]" + type) != null
           if (src.match("notify"))
