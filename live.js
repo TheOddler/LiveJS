@@ -3,14 +3,14 @@
   Originally written for Handcraft.com by Martin Kool (@mrtnkl),
   Updated by Pablo Bollansée.
 
-  pabloproductions.be/LiveJS/livejs.js
+  pabloproductions.be/LiveJS/live.js
 
-  Include livejs.js#css to monitor css changes only.
-  Include livejs.js#js to monitor js changes only.
-  Include livejs.js#html to monitor html changes only.
-  Mix and match to monitor a preferred combination such as livejs.js#html,css  
+  Include live.js#css to monitor css changes only.
+  Include live.js#js to monitor js changes only.
+  Include live.js#html to monitor html changes only.
+  Mix and match to monitor a preferred combination such as live.js#html,css  
 
-  By default, just include livejs.js to monitor all css, js and html changes.
+  By default, just include live.js to monitor all css, js and html changes.
 */
 (function () {
 
@@ -55,7 +55,7 @@
         var script = scripts[i], src = script.getAttribute("src");
         if (src && isLocal(src))
           uris.push(src);
-        if (src && src.match(/\blivejs.js#/)) {
+        if (src && src.match(/\blive.js#/)) {
           for (var type in active)
             active[type] = src.match("[#,|]" + type) != null
           if (src.match("notify"))

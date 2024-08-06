@@ -3,6 +3,6 @@ This is less efficient, but works with servers that don't return the monitored h
 
 # How?
 
-Just include [PabloProductions.be/LiveJS/livejs.js](pabloproductions.be/LiveJS/livejs.js) and it will monitor the current page including local CSS and Javascript by sending consecutive GET requests to the server.
+Just include [PabloProductions.be/LiveJS/live.js](pabloproductions.be/LiveJS/live.js) and it will monitor the current page including local CSS and Javascript by sending consecutive GET requests to the server.
 
 Changes to CSS will be applied dynamically and HTML or Javascript changes will reload the page.
